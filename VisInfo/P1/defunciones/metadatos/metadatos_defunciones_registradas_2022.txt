@@ -1,0 +1,38 @@
+Identifier: MEX-INEGI.ESD5.03-EDR-2022
+
+Title: Estadísticas de Defunciones Registradas 2022
+
+Description: INEGI. Estadísticas de Defunciones Registradas 2022. SNIEG. Información de Interés Nacional
+
+Las estadísticas de defunciones registradas contribuyen a la tarea institucional de proporcionar información estadística de interés nacional, a efecto de coadyuvar al desarrollo nacional.
+
+Generar y difundir la información sobre el fenómeno de la mortalidad en el país, que permite conocer y comparar el volumen, tendencia y características de la mortalidad en los diferentes ámbitos geográficos del país, conformando un insumo para el análisis y evaluación de acciones dirigidas a la elaboración de programas de salud pública.
+
+La información proporcionada por el INEGI brinda un panorama sobre dicho fenómeno demográfico a nivel nacional, entidad federativa, municipio y localidad referidos a tres ámbitos: lugar de registro, lugar de ocurrencia, lugar de residencia habitual del fallecido(a) y entidad de ocurrencia de la lesión.
+
+En la generación de las estadísticas de defunciones registradas se han adoptado, recomendaciones internacionales, emitidas por la Organización de las Naciones Unidas (ONU), la cual dicta las normas, conceptos y procedimientos que estandarizan las actividades de este rubro en los diferentes países; así como, por la Organización Mundial de la Salud (OMS) para el uso de la Clasificación Estadística Internacional de Enfermedades y Problemas relacionados con la Salud (CIE). Por otro lado, dentro de las leyes nacionales aplicables en la generación de información se encuentra la Ley General de Salud (LGS) que reglamenta el derecho a la protección de la salud que tiene toda persona; establece las bases y modalidades para el acceso a los servicios de salud y la concurrencia de la federación y las entidades federativas en materia de salubridad general.
+
+NOTA:
+El 10 de noviembre de 2023, para identificar la Condición de violencia familiar en el Conjunto de datos, se deben considerar los registros que tengan en el campo Causa de defunción (CAUSA_DEF) el rango de X850-Y099, así como el Parentesco del presunto agresor (PAR_AGRE). El campo PAR_AGRE permite identificar la condición de violencia familiar en las defunciones por presunto homicidio; los códigos del 01 al 26 y del 37 al 52 corresponden a Sí hubo violencia familiar; los códigos del 27 al 36 y del 53 al 71 a No hubo violencia familiar; y los códigos 72 y 99 a condición de violencia familiar No especificada. 
+
+Modified: 2023-11-10
+
+Publisher: Instituto Nacional de Estadística y Geografía, INEGI
+
+Mbox: atencion.usuarios@inegi.org.mx
+
+License: https://www.inegi.org.mx/inegi/terminos.html
+
+dataDictionary: https://www.inegi.org.mx/rnm/index.php/catalog/923/data-dictionary
+
+Keyword: "causas", "deceso", "defunción", "demográfica", "enfermedad", "fallecimiento", "homicidio", "mortalidad", "muerte", "población", "suicidio"
+
+ContactPoint: Mtro. J. Armando Aguiar Rodríguez, 800 111 4634
+
+Temporal: 2022-01-01-2022-12-31
+
+Spatial: Estados Unidos Mexicanos
+
+AccrualPeriodicity: Anualmente
+
+Distribution: https://www.inegi.org.mx/programas/mortalidad/
