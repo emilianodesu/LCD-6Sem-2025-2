@@ -1,0 +1,59 @@
+{
+    "id": "Company Projects",
+    "children": [
+        {
+            "id": "Project 1",
+            "children": [
+                {
+                    "id": "Name",
+                    "value": "Product X"
+                },
+                {
+                    "id": "Number",
+                    "value": 123
+                },
+                {
+                    "id": "Location",
+                    "value": "Bellaire"
+                },
+                {
+                    "id": "Worker 1",
+                    "children": [
+                        {
+                            "id": "ssn_1",
+                            "value": 123456789
+                        },
+                        {
+                            "id": "first_name_1",
+                            "value": "Smith"
+                        },
+                        {
+                            "id": "hours_1",
+                            "value": 40.0
+                        }
+                    ]
+                },
+                {
+                    "id": "Worker 2",
+                    "children": [
+                        {
+                            "id": "ssn_2",
+                            "value": 987654321
+                        },
+                        {
+                            "id": "first_name_2",
+                            "value": "Joyce"
+                        },
+                        {
+                            "id": "hours_2",
+                            "value": 40.0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "Project 2"
+        }
+    ]
+}

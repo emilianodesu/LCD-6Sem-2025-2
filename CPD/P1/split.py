@@ -10,14 +10,14 @@ with open(input_file, "r", encoding="utf-8") as f:
 # Variables para el procesamiento
 current_section = None
 section_content = []
-output_dir = "secciones"
+output_dir = "src"
 os.makedirs(output_dir, exist_ok=True)
 
 for line in lines:
-    if line.startswith("# #### Sección"):
+    if line.startswith("# # Sección"):
         # Guardar la sección anterior si existe
         if current_section is not None:
-            output_file = os.path.join(output_dir, f"Seccion_{current_section}.py")
+            output_file = os.path.join(output_dir, f"seccion_{current_section}.py")
             with open(output_file, "w", encoding="utf-8") as out_f:
                 out_f.writelines(section_content)
         
@@ -29,7 +29,7 @@ for line in lines:
 
 # Guardar la última sección
 if current_section is not None:
-    output_file = os.path.join(output_dir, f"Seccion_{current_section}.py")
+    output_file = os.path.join(output_dir, f"seccion_{current_section}.py")
     with open(output_file, "w", encoding="utf-8") as out_f:
         out_f.writelines(section_content)
 

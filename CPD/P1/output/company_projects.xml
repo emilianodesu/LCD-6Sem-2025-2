@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nodo id="Company Projects"><nodo id="Project 1"><nodo id="Name">Product X</nodo><nodo id="Number">123</nodo><nodo id="Location">Bellaire</nodo><nodo id="Worker 1"><nodo id="ssn_1">123456789</nodo><nodo id="first_name_1">Smith</nodo><nodo id="hours_1">40.0</nodo></nodo><nodo id="Worker 2"><nodo id="ssn_2">987654321</nodo><nodo id="first_name_2">Joyce</nodo><nodo id="hours_2">40.0</nodo></nodo></nodo><nodo id="Project 2" /></nodo>
