@@ -1,7 +1,5 @@
-#pip install metaphone fuzzy
 import fuzzy  # Para NYSIIS
 from metaphone import doublemetaphone  # Para Metaphone
-from fuzzy import Soundex  # Para Soundex
 
 def apply_soundex(word):
     """
