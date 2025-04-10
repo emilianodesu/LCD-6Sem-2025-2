@@ -1,0 +1,1010 @@
+---
+title: "Análisis de Divorcios en México en 2023"
+author: "Carlos Emiliano Mendoza Hernández"
+date: "10 de Abril del 2025"
+output:
+  beamer_presentation:
+    theme: "Frankfurt"
+    colortheme: "lily"
+    fonttheme: "structurebold"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(patchwork)
+library(forcats)
+library(ggtext)
+library(scales)
+```
+
+```{r load-data, message=FALSE, warning=FALSE, include=FALSE}
+divorcios <- read_csv("divorcios_ed2023/conjunto_de_datos/conjunto_de_datos_ed2023.csv")
+colnames(divorcios)
+```
+
+# Edades de los divorciantes
+
+```{r edades, echo=FALSE}
+
+filtro_edad <- divorcios %>%
+  select(edad_div1, sexo_div1, edad_div2, sexo_div2) %>%
+  filter(edad_div1 != 999, edad_div2 != 999, sexo_div1 %in% c(1, 2), sexo_div2 %in% c(1, 2))
+
+correlacion <- round(cor(filtro_edad$edad_div1, filtro_edad$edad_div2), 2)
+total_casos <- format(nrow(filtro_edad), big.mark = ",")
+
+ggplot(filtro_edad, aes(x = edad_div1, y = edad_div2)) +
+  geom_bin2d(bins = 30) +
+  scale_fill_viridis_c(
+    name = "Frecuencia",
+    option = "plasma",
+    guide = guide_colorbar(
+      barwidth = 0.5,
+      barheight = 17,
+      title.position = "top",
+      title.hjust = 0.5,
+      frame.colour = "black",
+      ticks.colour = "black"
+    )
+  ) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray40", linewidth = 1) +
+  scale_x_continuous(breaks = seq(10, 100, by = 10)) +
+  scale_y_continuous(breaks = seq(10, 100, by = 10)) +
+  labs(
+    title = "Relación entre las edades de los divorciantes",
+    subtitle = "Distribución conjunta de edades al momento del divorcio",
+    x = "Edad del primer divorciante (años)",
+    y = "Edad del segundo divorciante (años)",
+    caption = paste("Fuente: Registros de divorcios 2023  | ", "Total de casos:", total_casos,
+                   "\nLos valores representan el número de parejas en cada combinación de edades")
+  ) +
+  annotate("label", x = 25, y = 95,
+           label = paste("Correlación:", correlacion),
+           fill = alpha("white", 0.8), color = "#2F2F2F",
+           size = 4, fontface = "bold") +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(size = 18, face = "bold", hjust = 0.5, 
+                             margin = margin(b = 8), color = "#2F2F2F"),
+    plot.subtitle = element_text(size = 14, hjust = 0.5, 
+                                margin = margin(b = 15), color = "#555555"),
+    plot.caption = element_text(size = 10, color = "#777777", hjust = 0.5,
+                               margin = margin(t = 15)),
+    axis.title = element_text(size = 13, face = "bold", color = "#333333"),
+    axis.text = element_text(size = 11, color = "#555555"),
+    panel.grid.major = element_line(color = "#EAEAEA", linewidth = 0.4),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    legend.position = "right",
+    legend.title = element_text(size = 11, face = "bold"),
+    legend.text = element_text(size = 10),
+    plot.margin = margin(20, 20, 20, 20)
+  ) +
+  coord_fixed(ratio = 1, clip = "off")
+```
+
+# Edades de los divorciantes
+
+```{r edades2, echo=FALSE}
+
+div1 <- filtro_edad %>%
+  transmute(
+    edad = edad_div1,
+    sexo = recode(as.character(sexo_div1), `1` = "Hombre", `2` = "Mujer")
+  )
+
+div2 <- filtro_edad %>%
+  transmute(
+    edad = edad_div2,
+    sexo = recode(as.character(sexo_div2), `1` = "Hombre", `2` = "Mujer")
+  )
+
+filtro_edad_long <- bind_rows(div1, div2)
+
+media_edades <- filtro_edad_long %>%
+  group_by(sexo) %>%
+  summarise(media_edad = mean(edad, na.rm = TRUE), .groups = "drop")
+
+colores_sexo <- c("Hombre" = "#1f77b4", "Mujer" = "#e377c2")
+
+p <- ggplot(filtro_edad_long, aes(x = edad, fill = sexo)) +
+  geom_histogram(binwidth = 2, alpha = 0.6, position = "identity", color = "black") +
+  geom_vline(
+    data = media_edades, 
+    aes(xintercept = media_edad, color = sexo),
+    linetype = "dashed", 
+    linewidth = 1.2,
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = colores_sexo) +
+  scale_color_manual(values = colores_sexo) +
+  scale_x_continuous(breaks = seq(0, max(filtro_edad_long$edad), by = 5)) +
+  # Títulos y etiquetas
+  labs(
+    title = "Distribución de Edades por Sexo",
+    subtitle = "Comparación entre hombres y mujeres divorciantes",
+    x = "Edad al momento del divorcio (años)",
+    y = "Frecuencia",
+    caption = paste(
+      "Fuente: Registros de divorcios 2023 |",
+      "Total de divorciantes:", comma(nrow(filtro_edad_long)),
+      "\nPromedio hombres:", round(media_edades$media_edad[1], 1),
+      "\nPromedio mujeres:", round(media_edades$media_edad[2], 1)
+    ),
+    fill = "Sexo",
+    color = "Sexo"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_markdown(
+      size = 20, face = "bold", hjust = 0.5, 
+      margin = margin(b = 8), color = "#2F2F2F"),
+    plot.subtitle = element_markdown(
+      size = 14, hjust = 0.5, 
+      margin = margin(b = 15), color = "#555555"),
+    plot.caption = element_text(
+      size = 10, color = "#777777", hjust = 0.5,
+      margin = margin(t = 15)),
+    axis.title = element_text(
+      size = 13, face = "bold", color = "#333333"),
+    axis.text = element_text(size = 11, color = "#555555"),
+    panel.grid.major = element_line(color = "#EAEAEA", linewidth = 0.4),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    legend.position = "top",
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 11),
+    plot.margin = margin(20, 20, 20, 20)
+  )
+y_max <- max(
+  hist(filtro_edad$edad_div1, plot = FALSE)$counts,
+  hist(filtro_edad$edad_div2, plot = FALSE)$counts
+)
+p + scale_y_continuous(breaks = seq(0, y_max, by = 1000))
+```
+
+# Duración de los matrimonios
+
+```{r duracion, echo=FALSE}
+
+divorcios_duracion <- divorcios %>%
+  filter(
+    anio_eje < 9999, anio_mat < 9999,
+    anio_eje >= anio_mat
+  ) %>%
+  mutate(
+    duracion = anio_eje - anio_mat
+  ) %>%
+  filter(duracion >= 0 & duracion <= 70)
+
+media_duracion <- mean(divorcios_duracion$duracion, na.rm = TRUE)
+
+# Histograma sin graficar para obtener valor máximo
+hist_data <- hist(divorcios_duracion$duracion, breaks = 0:70, plot = FALSE)
+y_max <- max(hist_data$counts)
+x_max <- hist_data$mids[which.max(hist_data$counts)]
+
+ggplot(divorcios_duracion, aes(x = duracion)) +
+  geom_histogram(binwidth = 1, fill = "#4c78a8", color = "black", alpha = 0.8) +
+  geom_vline(aes(xintercept = media_duracion), color = "red", linetype = "dashed", linewidth = 1.2) +
+  scale_x_continuous(breaks = seq(0, max(divorcios_duracion$duracion), by = 5)) +
+  scale_y_continuous(breaks = seq(0, y_max + 500, by = 500)) +
+  labs(
+    title = "Distribución de la Duración de los Matrimonios hasta el Divorcio",
+    subtitle = "Análisis del periodo de convivencia antes de la separación legal",
+    x = "Años de duración del matrimonio",
+    y = "Número de divorcios",
+    caption = paste("Fuente: Registros de divorcios 2023  | ","Matrimonios contabilizados =", format(nrow(divorcios_duracion), big.mark = ","))
+  ) +
+  annotate("text", 
+           x = media_duracion + 4, 
+           y = y_max * 0.9,
+           label = paste("Duración media:", round(media_duracion, 1), "años"), 
+           color = "#E15759", 
+           size = 4,
+           fontface = "bold",
+           hjust = 0) +
+  annotate("text", 
+           x = x_max, 
+           y = y_max + 100,
+           label = paste("Máximo:", y_max, ", 4 años"), 
+           color = "#1b1b1b",
+           fontface = "bold",
+           size = 4,
+           vjust = 0) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_markdown(
+      size = 20, face = "bold", hjust = 0.5, 
+      margin = margin(b = 8), color = "#2F2F2F"),
+    plot.subtitle = element_markdown(
+      size = 14, hjust = 0.5, 
+      margin = margin(b = 15), color = "#555555"),
+    plot.caption = element_text(
+      size = 10, color = "#777777", hjust = 0.5,
+      margin = margin(t = 15)),
+    axis.title = element_text(
+      size = 13, face = "bold", color = "#333333"),
+    axis.text = element_text(size = 11, color = "#555555"),
+    panel.grid.major = element_line(color = "#EAEAEA", linewidth = 0.4),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    legend.position = "top",
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 11),
+    plot.margin = margin(20, 20, 20, 20)
+  )
+
+```
+
+# Causas de Divorcios
+
+```{r causas, echo=FALSE}
+
+catalogo_causas <- tibble::tribble(
+  ~clave, ~descripcion,
+  1, "Mutuo consentimiento",
+  2, "Adulterio o infidelidad sexual",
+  3, "Alumbramiento ilegítimo",
+  4, "Propuesta de prostitución",
+  5, "Incitación a la violencia",
+  6, "Corrupción y/o maltrato a los hijos",
+  7, "Enfermedad crónica o incurable, impotencia o esterilidad",
+  8, "Enajenación mental incurable o estado de interdicción",
+  9, "Separación del hogar conyugal >1 año",
+  10, "Abandono del hogar >3 o 6 meses",
+  11, "Declaración de ausencia o presunción de muerte",
+  12, "Sevicia, amenazas, injurias o violencia intrafamiliar",
+  13, "Negativa a contribuir al sostenimiento del hogar",
+  14, "Acusación calumniosa",
+  15, "Delito doloso o infamante",
+  16, "Hábitos de juego, embriaguez o drogas",
+  17, "Delito contra el cónyuge",
+  18, "Incompatibilidad de caracteres",
+  19, "Separación por ≥2 años",
+  20, "Bigamia",
+  21, "No acompañar a marido cuando cambia de residencia",
+  22, "Divorcio tras sentencia sin causa justificada",
+  23, "Fecundación asistida sin consentimiento",
+  24, "Impedir actividad lícita del cónyuge",
+  25, "Reconocer hijo previo sin consentimiento del cónyuge",
+  26, "Esterilización sin consentimiento",
+  27, "Bisexualidad, cambio de sexo o intención de hacerlo",
+  28, "Sin causa (incausado)",
+  99, "No especificada"
+)
+
+divorcios_causas <- divorcios %>%
+  filter(causa != 99) %>%
+  left_join(catalogo_causas, by = c("causa" = "clave")) %>%
+  count(descripcion) %>%
+  arrange(n)
+
+total_divorcios <- sum(divorcios_causas$n)
+
+top_causas <- divorcios_causas %>%
+  filter(descripcion %in% c("Sin causa (incausado)", "Mutuo consentimiento"))
+
+otras_causas <- divorcios_causas %>%
+  filter(!descripcion %in% c("Sin causa (incausado)", "Mutuo consentimiento"))
+
+top_causas <- top_causas %>%
+  mutate(pct = n / total_divorcios)
+
+otras_causas <- otras_causas %>%
+  mutate(pct = n / total_divorcios)
+
+# Gráfica 1: Principales causas
+g1 <- ggplot(top_causas, aes(x = n, y = fct_reorder(descripcion, n))) +
+  geom_col(fill = "#f56476", color = 'black') +
+  labs(title = "Principales causas de divorcio", 
+       x = "Número de casos registrados", 
+       y = NULL) +
+  scale_x_continuous(
+    limits = c(0, max(top_causas$n) * 1.15),
+    expand = expansion(mult = c(0, 0.05))
+  ) +
+  geom_text(
+    aes(label = paste0(scales::comma(n), " (", scales::percent(pct, accuracy = 0.1), ")")),
+    hjust = -0.05,
+    size = 2.9,
+    color = "gray30",
+    fontface = "bold"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_markdown(
+      size = 20, face = "bold", hjust = 0.5, 
+      margin = margin(b = 8), color = "#2F2F2F"),
+    axis.title = element_text(size = 13, face = "bold", color = "#333333"),
+    axis.text = element_text(size = 11, color = "#555555"),
+    plot.margin = margin(20, 20, 20, 20)
+  )
+
+# Gráfica 2: Otras causas
+g2 <- ggplot(otras_causas, aes(x = n, y = fct_reorder(descripcion, n))) +
+  geom_col(fill = "#4c78a8", color = 'black') +
+  scale_x_continuous(
+    breaks = seq(0, max(otras_causas$n), by = 100),
+    limits = c(0, max(otras_causas$n) * 1.15),
+    expand = expansion(mult = c(0, 0.05))
+  ) +
+  labs(
+    title = "Otras causas de divorcio", 
+    x = "Número de casos registrados", 
+    y = NULL, 
+    caption = paste("Fuente: Registros de divorcios 2023 |",
+                   "Registros considerados =", format(total_divorcios, big.mark = ","))
+  ) +
+  geom_text(
+    aes(label = paste0(scales::comma(n), " (", scales::percent(pct, accuracy = 0.0001), ")")),
+    hjust = -0.05,
+    size = 2.9,
+    color = "gray30",
+    fontface = "bold"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_markdown(
+      size = 20, face = "bold", hjust = 0.5, 
+      margin = margin(b = 8), color = "#2F2F2F"),
+    axis.title = element_text(size = 13, face = "bold", color = "#333333"),
+    axis.text = element_text(size = 11, color = "#555555"),
+    plot.caption = element_text(size = 10, color = "#777777", hjust = 0.5),
+    plot.margin = margin(20, 20, 20, 20)
+  )
+
+(g1 / g2) + plot_layout(heights = c(2, nrow(otras_causas)))
+```
+
+# Causas de Divorcios vs. Duración de los Matrimonios
+
+```{r causas2, echo=FALSE}
+
+colores <- c(
+  "Mutuo consentimiento" = "#4E79A7", 
+  "Sin causa (incausado)" = "#F28E2B",
+  "Otras causas" = "#59A14F"
+)
+
+divorcios_dur_causas <- divorcios %>%
+  filter(anio_eje < 9999, anio_mat < 9999, anio_eje >= anio_mat) %>%
+  mutate(duracion = anio_eje - anio_mat) %>%
+  filter(duracion >= 0, duracion <= 70) %>%
+  left_join(catalogo_causas, by = c("causa" = "clave"))
+
+datos_consolidados <- divorcios_dur_causas %>%
+  mutate(
+    categoria = case_when(
+      descripcion == "Mutuo consentimiento" ~ "Mutuo consentimiento",
+      descripcion == "Sin causa (incausado)" ~ "Sin causa (incausado)",
+      TRUE ~ "Otras causas"
+    )
+  )
+
+mediana_global <- median(datos_consolidados$duracion, na.rm = TRUE)
+
+ggplot(datos_consolidados, aes(x = duracion, y = fct_reorder(descripcion, duracion, .fun = median))) +
+  geom_boxplot(fill = "#4E79A7", color = "black", alpha = 0.8, outlier.shape = NA) +
+  geom_vline(xintercept = mediana_global, 
+             linetype = "dashed", color = "gray40", linewidth = 0.8) +
+  scale_x_continuous(
+    breaks = seq(0, 70, by = 5),
+    limits = c(0, 70),
+    expand = c(0, 0)
+  ) +
+  labs(
+    title = "Duración del Matrimonio antes del Divorcio",
+    subtitle = "Distribución de años de convivencia según motivo de divorcio",
+    x = "Duración del matrimonio (años)",
+    y = NULL,
+    caption = paste(
+      "Fuente: Registros de divorcios 2023 |",
+      "Total de casos:", format(nrow(datos_consolidados), big.mark = ","),
+      "| Mediana global =", round(mediana_global, 1), "años"
+    )
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_markdown(
+      size = 20, face = "bold", hjust = 0.5, 
+      margin = margin(b = 8), color = "#2F2F2F"),
+    plot.subtitle = element_markdown(
+      size = 14, hjust = 0.5, 
+      margin = margin(b = 15), color = "#555555"),
+    plot.caption = element_text(
+      size = 10, color = "#777777", hjust = 0.5,
+      margin = margin(t = 15)),
+    axis.title = element_text(
+      size = 13, face = "bold", color = "#333333"),
+    axis.text = element_text(size = 11, color = "#555555"),
+    panel.grid.major = element_line(color = "#EAEAEA", linewidth = 0.4),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    legend.position = "top",
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 11),
+    plot.margin = margin(20, 20, 20, 20)
+  ) +
+  facet_grid(
+    rows = vars(fct_relevel(categoria, "Mutuo consentimiento", "Sin causa (incausado)", "Otras causas")),
+    scales = "free_y",
+    space = "free"
+  )
+```
+
+# Sexualidad de los Divorciantes
+
+```{r sexualidad, echo=FALSE}
+
+tipos_pareja <- tibble::tibble(
+  t_dvante = c(1, 2, 3),
+  tipo = c("Hombre - Mujer", "Hombre - Hombre", "Mujer - Mujer")
+)
+
+sexualidad_divorcios <- divorcios %>%
+  filter(t_dvante %in% 1:3) %>%
+  count(t_dvante) %>%
+  left_join(tipos_pareja, by = "t_dvante") %>%
+  mutate(
+    porcentaje = n / sum(n),
+    etiqueta = paste0(sprintf("%.2f", porcentaje * 100), "%"),
+    tipo = fct_reorder(tipo, n)
+  )
+
+ggplot(sexualidad_divorcios, aes(x = porcentaje, y = tipo)) +
+  geom_col(fill = "#F28E2B", color = "black", width = 0.6) +
+  # Etiquetas con formato "valor (porcentaje%)"
+  geom_text(
+    aes(label = paste0(comma(n), " (", sprintf("%.1f", porcentaje*100), "%)")),
+    hjust = -0.1,
+    size = 4,
+    fontface = "bold",
+    color = "#333333"
+  ) +
+  scale_x_continuous(
+    labels = percent_format(accuracy = 1),
+    expand = expansion(mult = c(0, 0.25))  # Más espacio para las etiquetas
+  ) +
+  labs(
+    title = "Composición sexual de las parejas divorciadas en México",
+    subtitle = "Distribución según tipo de pareja",
+    x = NULL,
+    y = "Tipo de pareja",
+    caption = paste(
+      "Fuente: Registros de divorcios 2023 |",
+      "Total de casos analizados:", comma(sum(sexualidad_divorcios$n)),
+      "\nNota: Las parejas del mismo sexo fueron legalizadas en México en 2010"
+    )
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_markdown(
+      size = 20, face = "bold", hjust = 0.5, 
+      margin = margin(b = 8), color = "#2F2F2F"),
+    plot.subtitle = element_markdown(
+      size = 14, hjust = 0.5, 
+      margin = margin(b = 12), color = "#555555"),
+    plot.caption = element_text(
+      size = 10, color = "#777777", hjust = 0.5,
+      margin = margin(t = 15), lineheight = 1.2),
+    axis.title.y = element_text(
+      size = 13, face = "bold", color = "#333333", margin = margin(r = 10)),
+    axis.text.y = element_text(
+      size = 12, face = "bold", color = "#333333"),
+    axis.text.x = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.margin = margin(20, 40, 20, 20)  # Más margen derecho para etiquetas
+  )
+```
+
+# Cantidad de Hijos en los Matrimonios
+
+```{r hijos, echo=FALSE}
+
+divorcios_hijos <- divorcios %>%
+  filter(hijos < 98) %>%
+  mutate(hijos_cat = case_when(
+    hijos == 0 ~ "0 hijos",
+    hijos == 1 ~ "1 hijo",
+    hijos >= 2 ~ paste(hijos, "hijos")
+  ) %>% fct_inorder()) %>%
+  count(hijos, hijos_cat) %>%
+  mutate(porcentaje = n/sum(n)*100)
+
+# Visualización
+ggplot(divorcios_hijos, aes(x = hijos, y = n)) +
+  geom_col(fill = "#56B4E9", color = "black", width=0.7) +
+  geom_text(aes(label = paste0(comma(n), "\n(", round(porcentaje, 2), "%)")),
+            vjust = -0.3, color = "#2F2F2F", size = 3.5) +
+  scale_x_continuous(breaks = seq(0, max(divorcios_hijos$hijos), by = 1)) +
+  scale_y_continuous(breaks = seq(0, max(divorcios_hijos$n), by = 5000), expand = expansion(mult = c(0, 0.1)),
+    labels = comma_format()) +
+  labs(
+    title = "Distribución de Divorcios según Cantidad de Hijos",
+    subtitle = "Frecuencia absoluta y porcentaje relativo de casos",
+    x = "Número de Hijos en el Matrimonio",
+    y = "Número de Divorcios",
+    caption = paste(
+      "Fuente: Registros de divorcios |",
+      "Total de casos válidos:", comma(sum(divorcios_hijos$n)))
+    ) +
+  theme_minimal(base_size = 13)  +
+  theme(
+    plot.title = element_text(
+      size = 20, face = "bold", hjust = 0.5, 
+      margin = margin(b = 8), color = "#2F2F2F"),
+    plot.subtitle = element_text(
+      size = 14, hjust = 0.5, 
+      margin = margin(b = 15), color = "#555555"),
+    plot.caption = element_text(
+      size = 10, color = "#777777", hjust = 0.5,
+      margin = margin(t = 15)),
+    axis.title = element_text(
+      size = 13, face = "bold", color = "#333333"),
+    axis.text = element_text(size = 11, color = "#555555"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_line(color = "#EAEAEA", linewidth = 0.4),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.margin = margin(20, 20, 20, 20)
+  )
+```
+
+# Sexo de las Personas que Solicitan el Divorcio
+
+```{r sexo, echo=FALSE}
+
+solicitud_divorcio <- divorcios %>%
+  filter(
+    ini_juic %in% 1:3,
+    sexo_div1 %in% 1:2,
+    sexo_div2 %in% 1:2
+  ) %>%
+  mutate(
+    solicitante = case_when(
+      ini_juic == 1 & sexo_div1 == 1 ~ "Hombre",
+      ini_juic == 1 & sexo_div1 == 2 ~ "Mujer",
+      ini_juic == 2 & sexo_div2 == 1 ~ "Hombre",
+      ini_juic == 2 & sexo_div2 == 2 ~ "Mujer",
+      ini_juic == 3 ~ "Ambos"
+    )
+  ) %>%
+  count(solicitante) %>%
+  mutate(
+    porcentaje = n / sum(n),
+    etiqueta = paste0(sprintf("%.2f", porcentaje * 100), "%"),
+    solicitante = fct_reorder(solicitante, n)
+  )
+
+
+# Preparación de datos mejorada
+solicitud_divorcio <- solicitud_divorcio %>%
+  mutate(
+    solicitante = fct_relevel(solicitante, "Ambos", "Mujer", "Hombre"), # Orden lógico
+    color_fill = case_when(
+      solicitante == "Ambos" ~ "#59A14F",
+      solicitante == "Mujer" ~ "#E15759",
+      solicitante == "Hombre" ~ "#4E79A7" 
+    )
+  )
+
+ggplot(solicitud_divorcio, aes(x = n, y = fct_rev(solicitante))) +
+  geom_col(aes(fill = color_fill), color = "black", width = 0.7, show.legend = FALSE) +
+  geom_text(
+    aes(label = paste0(etiqueta, "\n(", comma(n), " casos)")),
+    hjust = -0.05,
+    size = 4,
+    color = "#333333",
+    lineheight = 0.9
+  ) +
+  geom_vline(xintercept = 0, color = "gray30", linewidth = 0.5) +
+
+  scale_x_continuous(
+    expand = expansion(mult = c(0, 0.25)),
+    labels = comma_format(),
+    breaks = pretty_breaks(6)
+  ) +
+  scale_fill_identity() +
+
+  labs(
+    title = "Iniciación de Procesos de Divorcio en México",
+    subtitle = "Distribución según quién solicita el procedimiento legal",
+    x = "Número de casos",
+    y = NULL,
+    caption = paste(
+      "Fuente: Registros de Divorcios 2023\n",
+      "Total de casos analizados:", comma(sum(solicitud_divorcio$n))
+    )
+  ) +
+
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_markdown(
+      size = 20, face = "bold", hjust = 0.5, 
+      margin = margin(b = 8), color = "#2F2F2F"),
+    plot.subtitle = element_markdown(
+      size = 14, hjust = 0.5, 
+      margin = margin(b = 15), color = "#555555"),
+    plot.caption = element_text(
+      size = 10, color = "#777777", hjust = 0.5,
+      margin = margin(t = 15)),
+    axis.title = element_text(
+      size = 13, face = "bold", color = "#333333"),
+    axis.text = element_text(size = 11, color = "#555555"),
+    panel.grid.major = element_line(color = "#EAEAEA", linewidth = 0.4),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    legend.position = "top",
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 11),
+    plot.margin = margin(20, 20, 20, 20)
+  )
+```
+
+# Estado de Matrimonio vs. Estado de Divorcio
+
+```{r estados, echo=FALSE}
+
+catalogo_entidades <- tibble::tribble(
+  ~clave, ~nombre,
+  '01', 'Aguascalientes',
+  '02', 'Baja California',
+  '03', 'Baja California Sur',
+  '04', 'Campeche',
+  '05', 'Chiapas',
+  '06', 'Chihuahua',
+  '07', 'Coahuila',
+  '08', 'Colima',
+  '09', 'Durango',
+  '10', 'Guanajuato',
+  '11', 'Guerrero',
+  '12', 'Hidalgo',
+  '13', 'Jalisco',
+  '14', 'México',
+  '15', 'Michoacán',
+  '16', 'Morelos',
+  '17', 'Nayarit',
+  '18', 'Nuevo León',
+  '19', 'Oaxaca',
+  '20', 'Puebla',
+  '21', 'Querétaro',
+  '22', 'Quintana Roo',
+  '23', 'San Luis Potosí',
+  '24', 'Sinaloa',
+  '25', 'Sonora',
+  '26', 'Tabasco',
+  '27', 'Tamaulipas',
+  '28', 'Tlaxcala',
+  '29', 'Veracruz',
+  '30', 'Yucatán',
+  '31', 'Zacatecas',
+  '32', 'CDMX'
+)
+
+relacion_estados <- divorcios %>%
+  filter(
+    ent_mat %in% 1:32,
+    ent_regis %in% 1:32
+  ) %>%
+  mutate(
+    ent_mat = sprintf("%02d", ent_mat),
+    ent_regis = sprintf("%02d", ent_regis)
+  ) %>%
+  count(ent_mat, ent_regis) %>%
+  left_join(catalogo_entidades, by = c("ent_mat" = "clave")) %>%
+  rename(nombre_ent_mat = nombre) %>%
+  left_join(catalogo_entidades, by = c("ent_regis" = "clave")) %>%
+  rename(nombre_ent_regis = nombre) %>%
+  mutate(
+    nombre_ent_mat = factor(nombre_ent_mat, levels = sort(catalogo_entidades$nombre)),
+    nombre_ent_regis = fct_rev(factor(nombre_ent_regis, levels = sort(catalogo_entidades$nombre)))
+  )
+
+max_diagonal <- relacion_estados %>% 
+  filter(ent_mat == ent_regis) %>% 
+  pull(n) %>% 
+  max()
+
+max_fuera_diagonal <- relacion_estados %>% 
+  filter(ent_mat != ent_regis) %>% 
+  pull(n) %>% 
+  max()
+
+ggplot(relacion_estados, aes(x = nombre_ent_mat, y = nombre_ent_regis, fill = n)) +
+  geom_tile(color = "white", linewidth = 0.3) +
+  scale_fill_gradientn(
+    colours = c("#E0ECF4", "#9EBCDA", "#8C96C6", "#88419D", "#6E016B"),
+    trans = "pseudo_log",
+    breaks = c(0, 1, 10, 100, 500, 1000, 5000, max(relacion_estados$n)),
+    labels = c("0", "1", "10", "100", "500", "1,000", "5,000", comma(max(relacion_estados$n))),
+    name = "Número de casos",
+    guide = guide_colorbar(
+      barwidth = unit(0.5, "cm"),
+      barheight = unit(10, "cm"),
+      ticks.colour = "gray30",
+      frame.colour = "gray30"
+    )
+  ) +
+  geom_tile(
+    data = filter(relacion_estados, ent_mat == ent_regis),
+    fill = NA,
+    color = "gold",
+    linewidth = 0.3
+  ) +
+  coord_fixed(ratio = 1) +
+  labs(
+    title = "Movilidad Interestatal para Matrimonio y Divorcio",
+    subtitle = "Resaltando parejas que se divorciaron en el mismo estado de matrimonio",
+    x = "Estado donde se celebró el matrimonio",
+    y = "Estado donde se registró el divorcio",
+    caption = "Fuente: Registros de Divorcios 2023"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_markdown(size = 20, face = "bold", hjust = 0.5, margin = margin(b = 8), color = "#2F2F2F"),
+    axis.title = element_text(size = 13, face = "bold", color = "#333333"),
+    plot.subtitle = element_markdown(size = 14, hjust = 0.5, margin = margin(b = 15), color = "#555555"),
+    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+    legend.position = "right",
+    panel.grid.major = element_line(color = "#EAEAEA", linewidth = 0.4),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    legend.text = element_text(size = 11),
+    plot.margin = margin(20, 20, 20, 20),
+    plot.caption = element_text(size = 10, color = "#777777", hjust = 0.5, margin = margin(t = 15))
+  )
+```
+
+# Escolaridad de los Divorciantes
+
+```{r escolaridad, echo=FALSE}
+
+catalogo_escolaridad <- tibble::tibble(
+  clave = 0:9,
+  nivel_etiqueta = c(
+    "Sin escolaridad", "1 a 3 años de primaria", "4 a 5 años de primaria",
+    "Primaria completa", "Secundaria o equivalente", "Preparatoria o equivalente",
+    "Superior", "Carrera técnica", "Otra", "No especificada"
+  )
+)
+escolaridad_divorcios <- divorcios %>%
+  select(escol_div1, escol_div2) %>%
+  pivot_longer(everything(), names_to = "persona", values_to = "nivel") %>%
+  filter(nivel != 9) %>%
+  count(nivel) %>%
+  left_join(catalogo_escolaridad, by = c("nivel" = "clave")) %>%
+  mutate(
+    porcentaje = n / sum(n),
+    nivel_etiqueta = fct_reorder(nivel_etiqueta, n),
+    etiqueta = paste0(sprintf("%.2f", porcentaje * 100), "%")
+  )
+
+escolaridad_divorcios <- escolaridad_divorcios %>%
+  mutate(
+    grupo_educativo = case_when(
+      nivel %in% 0:3 ~ "Básica",
+      nivel %in% 4:5 ~ "Media",
+      nivel %in% 6:7 ~ "Superior",
+      TRUE ~ "Otra"
+    ),
+    grupo_educativo = fct_relevel(grupo_educativo, "Superior", "Media", "Básica", "Otra"),
+    nivel_etiqueta = fct_reorder(nivel_etiqueta, nivel)
+  ) %>%
+  filter(!is.na(grupo_educativo))  # Filtramos NA si existen
+
+ggplot(escolaridad_divorcios, aes(x = porcentaje, y = nivel_etiqueta, fill = grupo_educativo)) +
+  geom_col(width = 0.7, color = "black", linewidth = 0.5) +
+  geom_text(
+    aes(label = paste0(percent(porcentaje, accuracy = 0.1), "\n(", comma(n), ")")),
+    hjust = -0.2,
+    size = 3.5,
+    color = "#333333",
+    lineheight = 0.85
+  ) +
+  scale_x_continuous(
+    labels = percent_format(accuracy = 1),
+    expand = expansion(mult = c(0, 0.25))
+  ) +
+  scale_fill_manual(
+    values = c("Superior" = "#4E79A7", "Media" = "#59A14F", "Básica" = "#F28E2B", "Otra" = "#FF9DA7"),
+    guide = guide_legend(title = "Nivel Educativo", reverse = TRUE)
+  ) +
+  labs(
+    title = "Distribución de Niveles Educativos en Población Divorciada",
+    subtitle = "Análisis comparativo de escolaridad entre divorciados en México",
+    x = NULL,
+    y = NULL,
+    caption = paste(
+      "Fuente: Registros de Divorcios 2023\n",
+      "Muestra:", comma(sum(escolaridad_divorcios$n)), "personas (ambos cónyuges)\n")
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_markdown(
+      size = 20, face = "bold", hjust = 0.5, 
+      margin = margin(b = 8), color = "#2F2F2F"),
+    plot.subtitle = element_markdown(
+      size = 14, hjust = 0.5, 
+      margin = margin(b = 15), color = "#555555"),
+    plot.caption = element_text(
+      size = 10, color = "#777777", hjust = 0.5,
+      margin = margin(t = 15)),
+    axis.title = element_text(
+      size = 13, face = "bold", color = "#333333"),
+    axis.text = element_text(size = 11, color = "#555555"),
+    panel.grid.major = element_line(color = "#EAEAEA", linewidth = 0.4),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    legend.position = "top",
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 11),
+    plot.margin = margin(20, 20, 20, 20)
+  )
+```
+
+# Fechas de Solicitud de Divorcios
+
+```{r fechas, echo=FALSE}
+
+divorcios_mensuales <- divorcios %>%
+  filter(mes_sen != 99, anio_sen != 9999) %>%
+  count(mes_sen) %>%
+  mutate(
+    mes_nombre = month(mes_sen, label = TRUE, abbr = FALSE),
+    mes_nombre = factor(mes_nombre, levels = month.name)
+  )
+
+divorcios_mensuales <- divorcios_mensuales %>%
+  mutate(
+    mes_nombre = fct_reorder(mes_nombre, mes_sen), # Orden cronológico
+    porcentaje = n/sum(n)*100,
+    etiqueta = paste0(comma(n), "\n(", round(porcentaje, 1), "%)"),
+    trimestre = case_when(
+      mes_sen %in% 1:3 ~ "1er Trim",
+      mes_sen %in% 4:6 ~ "2do Trim",
+      mes_sen %in% 7:9 ~ "3er Trim",
+      TRUE ~ "4to Trim"
+    )
+  )
+
+ggplot(divorcios_mensuales, aes(x = mes_nombre, y = n, fill = trimestre)) +
+  geom_col(color = "black", linewidth = 0.5, width = 0.8) +
+  geom_text(
+    aes(label = etiqueta),
+    vjust = -0.3,
+    size = 3.5,
+    color = "#333333",
+    lineheight = 0.9
+  ) +
+  scale_y_continuous(
+    labels = comma_format(),
+    expand = expansion(mult = c(0, 0.15))
+  ) +
+  scale_x_discrete(
+    labels = c("Ene", "Feb", "Mar", "Abr", "May", "Jun", 
+               "Jul", "Ago", "Sep", "Oct", "Nov", "Dic")
+  ) +
+  scale_fill_manual(
+    values = c("1er Trim" = "#4E79A7", "2do Trim" = "#59A14F", 
+               "3er Trim" = "#F28E2B", "4to Trim" = "#E15759")
+  ) +
+  labs(
+    title = "Patrón Mensual de Sentencias de Divorcio en México",
+    subtitle = "Distribución anual con agrupación por trimestres",
+    x = NULL,
+    y = "Número de sentencias",
+    fill = "Trimestre",
+    caption = paste(
+      "Fuente: Registros de Divorcios 2023\n",
+      "Total analizado:", comma(sum(divorcios_mensuales$n)), "sentencias"
+    )
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_markdown(
+      size = 20, face = "bold", hjust = 0.5, 
+      margin = margin(b = 8), color = "#2F2F2F"),
+    plot.subtitle = element_markdown(
+      size = 14, hjust = 0.5, 
+      margin = margin(b = 12), color = "#555555"),
+    plot.caption = element_text(
+      size = 10, color = "#777777", hjust = 0.5,
+      margin = margin(t = 15), lineheight = 1.2),
+    axis.text.x = element_text(
+      angle = 0,  # Cambiado a horizontal para mejor lectura
+      hjust = 0.5,
+      size = 12, 
+      face = "bold", 
+      color = "#333333"),
+    axis.text.y = element_text(
+      size = 11, color = "#555555"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    legend.position = "top",
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 11),
+    plot.margin = margin(20, 20, 20, 20)
+  )
+```
+
+# Resumen
+
+## Edades de los divorciantes
+
+-   Las edades de los divorciantes tienen una **correlación** alta (**0.86**), es decir, es muy significativo el número de divorcios entre cónyuges de edades similares (o cercanas).
+-   Las personas tienden a divorciarse de alguien cercano en edad especialmente alrededor de los **30** y los **40 años**.
+-   Las **mujeres** (**40.8 años**) se divorcian, en promedio, **más jóvenes** que los **hombres** (**43.2**).
+-   Tanto hombres como mujeres se divorcian más entre los **30** y **45 años**.
+
+# Resumen
+
+## Duración de los matrimonios
+
+-   La duración promedio de los divorcios es de **16.8 años**.
+
+-   La mediana es de **15 años** de duración.
+
+-   El mayor número de matrimonios (**7,137**) se divorció a los **4 años**.
+
+# Resumen
+
+## Causas de los divorcios
+
+-   Más de **110,000** divorcios no tuvieron una causa en concreto.
+
+-   Más del **31%** de los divorcios se dieron por mutuo consentimiento.
+
+-   El resto de las causas no representaron más del **2%**.
+
+# Resumen
+
+## Causas de los divorcios vs. Duración del matrimonio
+
+-   Los divorcios por **Delitos dolosos** fueron los que, en distribución, **duraron más tiempo como matrimonio** (**mediana\>30**).
+
+-   Causas de divorcio como **Incitación a la violencia**, **Impedimento de actividades lícitas**, **Enajenación mental incurable** y **Maltrato a los hijos**; fueron **las que menos duraron** en distribución (**mediana \< mediana global**).
+
+# Resumen
+
+## Sexo de los solicitantes
+
+-   Más del **36%** (**60,255 casos**) de los divorcios fueron solicitados por **ambos**.
+
+-   Las mujeres (**57,530 casos**) solicitaron más divorcios que los hombres (**45,802 casos**).
+
+# Resumen
+
+## Más descubrimientos
+
+-   Sólo el **0.5%** de los divorcios fueron de parejas del mismo sexo.
+
+-   Los casos **más frecuentes**, fueron los divorcios entre parejas con **2 hijos**.
+
+-   La mayoría de los divorciantes solicitaron su divorcio en el mismo estado en el que contrajeron matrimonio.
+
+# Resumen
+
+## Más descubrimientos
+
+-   Se presentaron **más casos** de divorcios entre las personas de **educación media** (**+55%**) que de **educación superior** (**+32%**).
+
+-   El nivel educativo **más frecuente** fue el Bachillerato con **62,890 casos**.
+
+-   El mes con **menos divorcios** en el año fue **Diciembre** (**8,672 divorcios**).
+
+-   En **Junio** se presentó la máxima cantidad de divorcios en el año.
