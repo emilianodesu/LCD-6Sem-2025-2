@@ -14,6 +14,15 @@ IPL_02.xlsx
 IPL_03.xlsx
 IPL_05.xlsx
 IPL_07.xlsx
+tlc_data.csv
+yellow_tripdata_2015-01.csv
+yellow_tripdata_2016-01.csv
+yellow_tripdata_2016-02.csv
+yellow_tripdata_2016-03.csv
+NYPD_Complaint_Data_Historic.csv
+Population_by_Borough_NYC.csv
 PROTECSA
 KTH_TIPS
 *.tsv.gz
+.env
+parquet
