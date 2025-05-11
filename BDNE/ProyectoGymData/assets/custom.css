@@ -1,0 +1,19 @@
+.custom-dropdown .Select-menu-outer {
+    background-color: #1e1e1e !important;
+    color: #a49b67 !important;
+    border-color: #555 !important;
+}
+
+.custom-dropdown .Select-option {
+    background-color: #1e1e1e !important;
+    color: #a49b67 !important;
+}
+
+.custom-dropdown .Select-option.is-focused {
+    background-color: #222 !important;
+}
+
+.custom-dropdown .Select-control {
+    background-color: #1a1a1a !important;
+    color: #a49b67 !important;
+}

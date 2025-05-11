@@ -1,0 +1,1885 @@
+[
+  {
+    "nombre": "Hale Shotboulte",
+    "email": "hshotboulte0@google.it",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.10461956744989,
+          19.50336462896819
+        ]
+      },
+      "calle": "Calle Canaleta"
+    },
+    "createdAt": "2021-12-09T17:31:15",
+    "updatedAt": "2021-12-09T17:31:15"
+  },
+  {
+    "nombre": "Odille Lewtey",
+    "email": "olewtey1@pagesperso-orange.fr",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Álvaro Obregón",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.26764665588918,
+          19.31736690158503
+        ]
+      },
+      "calle": "Calle Emiliano Zapata"
+    },
+    "createdAt": "2024-01-22T04:04:04",
+    "updatedAt": "2024-01-22T04:04:04"
+  },
+  {
+    "nombre": "Oralie Godwin",
+    "email": "ogodwin2@ow.ly",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Cuajimalpa de Morelos",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.31643178008302,
+          19.327854034811516
+        ]
+      },
+      "calle": "Carretera México - Toluca (Cuota)"
+    },
+    "createdAt": "2024-11-28T01:54:28",
+    "updatedAt": "2024-11-28T01:54:28"
+  },
+  {
+    "nombre": "Elora Coard",
+    "email": "ecoard3@a8.net",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Coyoacán",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.1711846834544,
+          19.318611593545274
+        ]
+      },
+      "calle": "Calle Aile"
+    },
+    "createdAt": "2020-08-19T06:53:41",
+    "updatedAt": "2020-08-19T06:53:41"
+  },
+  {
+    "nombre": "Carlin Randle",
+    "email": "crandle4@cloudflare.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.05815614732387,
+          19.34604842477902
+        ]
+      },
+      "calle": "Calle Jesús Romero Flores"
+    },
+    "createdAt": "2020-11-28T10:10:18",
+    "updatedAt": "2020-11-28T10:10:18"
+  },
+  {
+    "nombre": "Edlin Hartington",
+    "email": "ehartington5@etsy.com",
+    "role": "owner",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.11393488814957,
+          19.49694565693854
+        ]
+      },
+      "calle": "Avenida Acueducto de Guadalupe"
+    },
+    "createdAt": "2020-05-10T14:03:44",
+    "updatedAt": "2020-05-10T14:03:44"
+  },
+  {
+    "nombre": "Talya Gyves",
+    "email": "tgyves6@vk.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Álvaro Obregón",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.24473942011635,
+          19.331650779593126
+        ]
+      },
+      "calle": "Avenida de las Torres"
+    },
+    "createdAt": "2022-10-09T12:38:21",
+    "updatedAt": "2022-10-09T12:38:21"
+  },
+  {
+    "nombre": "Davey Scrowby",
+    "email": "dscrowby7@imgur.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.12266132873872,
+          19.48745939577393
+        ]
+      },
+      "calle": "Avenida Insurgentes Norte"
+    },
+    "createdAt": "2021-04-06T05:05:12",
+    "updatedAt": "2021-04-06T05:05:12"
+  },
+  {
+    "nombre": "Nat Wardington",
+    "email": "nwardington8@nih.gov",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Azcapotzalco",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.20184822000476,
+          19.477148876225648
+        ]
+      },
+      "calle": "Calle Victoria"
+    },
+    "createdAt": "2021-12-11T19:01:17",
+    "updatedAt": "2021-12-11T19:01:17"
+  },
+  {
+    "nombre": "Bili Tibbles",
+    "email": "btibbles9@elegantthemes.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Tláhuac",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.00916267029889,
+          19.271549285338413
+        ]
+      },
+      "calle": "Calle San Juan"
+    },
+    "createdAt": "2024-02-24T21:53:54",
+    "updatedAt": "2024-02-24T21:53:54"
+  },
+  {
+    "nombre": "Merv Boorn",
+    "email": "mboorna@samsung.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.06367110607371,
+          19.343134259682564
+        ]
+      },
+      "calle": "Andador Salsifí"
+    },
+    "createdAt": "2023-02-15T06:20:32",
+    "updatedAt": "2023-02-15T06:20:32"
+  },
+  {
+    "nombre": "Korey D'orsay",
+    "email": "kdorsayb@cocolog-nifty.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.1125632913365,
+          19.500152689666223
+        ]
+      },
+      "calle": "Calle Mixcoatl"
+    },
+    "createdAt": "2021-02-03T21:46:54",
+    "updatedAt": "2021-02-03T21:46:54"
+  },
+  {
+    "nombre": "Johnathan Rentz",
+    "email": "jrentzc@mashable.com",
+    "role": "owner",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Azcapotzalco",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.18474080185665,
+          19.505457353344376
+        ]
+      },
+      "calle": "Estacionamiento C"
+    },
+    "createdAt": "2021-09-19T00:00:33",
+    "updatedAt": "2021-09-19T00:00:33"
+  },
+  {
+    "nombre": "Abie Cholonin",
+    "email": "acholonind@walmart.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.06469996829603,
+          19.34125297808417
+        ]
+      }
+    },
+    "createdAt": "2022-11-08T22:54:08",
+    "updatedAt": "2022-11-08T22:54:08"
+  },
+  {
+    "nombre": "Lazarus Feeny",
+    "email": "lfeenye@squarespace.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Cuauhtémoc",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.15860421252746,
+          19.420547218419784
+        ]
+      },
+      "calle": "Calle Colima"
+    },
+    "createdAt": "2021-12-07T19:58:15",
+    "updatedAt": "2021-12-07T19:58:15"
+  },
+  {
+    "nombre": "Averell Nangle",
+    "email": "ananglef@wordpress.org",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.06156576526111,
+          19.35401858861995
+        ]
+      },
+      "calle": "Calle 1 Jesús Rodríguez"
+    },
+    "createdAt": "2020-06-06T04:14:40",
+    "updatedAt": "2020-06-06T04:14:40"
+  },
+  {
+    "nombre": "Osbourne Fusedale",
+    "email": "ofusedaleg@aboutads.info",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.05953951496573,
+          19.353365484398605
+        ]
+      },
+      "calle": "Anillo Periférico"
+    },
+    "createdAt": "2021-03-30T05:38:12",
+    "updatedAt": "2021-03-30T05:38:12"
+  },
+  {
+    "nombre": "Shaughn Ilyinykh",
+    "email": "silyinykhh@bing.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Álvaro Obregón",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.23778577096815,
+          19.337885391082335
+        ]
+      }
+    },
+    "createdAt": "2023-09-02T07:21:31",
+    "updatedAt": "2023-09-02T07:21:31"
+  },
+  {
+    "nombre": "Effie Checcuzzi",
+    "email": "echeccuzzii@craigslist.org",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.06654203722171,
+          19.346472560880333
+        ]
+      },
+      "calle": "Calzada Ermita Iztapalapa"
+    },
+    "createdAt": "2020-02-27T05:51:47",
+    "updatedAt": "2020-02-27T05:51:47"
+  },
+  {
+    "nombre": "Curry Dik",
+    "email": "cdikj@g.co",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.1161545396159,
+          19.502926137227774
+        ]
+      }
+    },
+    "createdAt": "2022-06-11T18:26:12",
+    "updatedAt": "2022-06-11T18:26:12"
+  },
+  {
+    "nombre": "Ezequiel Pavie",
+    "email": "epaviek@apache.org",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Álvaro Obregón",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.24412473831701,
+          19.352828522959793
+        ]
+      }
+    },
+    "createdAt": "2020-02-29T08:46:48",
+    "updatedAt": "2020-02-29T08:46:48"
+  },
+  {
+    "nombre": "Isabelita Charles",
+    "email": "icharlesl@webs.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Tláhuac",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.00036188045452,
+          19.300912703035827
+        ]
+      }
+    },
+    "createdAt": "2020-05-03T15:15:38",
+    "updatedAt": "2020-05-03T15:15:38"
+  },
+  {
+    "nombre": "Bradan Clausen-Thue",
+    "email": "bclausenthuem@digg.com",
+    "role": "owner",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztacalco",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.09116454959829,
+          19.400588492227797
+        ]
+      },
+      "calle": "Calle Coliflor"
+    },
+    "createdAt": "2020-04-23T02:45:31",
+    "updatedAt": "2020-04-23T02:45:31"
+  },
+  {
+    "nombre": "Brocky Lancaster",
+    "email": "blancastern@harvard.edu",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Tlalpan",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.19069474271366,
+          19.17970741236163
+        ]
+      }
+    },
+    "createdAt": "2022-02-03T10:42:01",
+    "updatedAt": "2022-02-03T10:42:01"
+  },
+  {
+    "nombre": "Katti McGroarty",
+    "email": "kmcgroartyo@edublogs.org",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.0616257163447,
+          19.35038070780457
+        ]
+      },
+      "calle": "Calle Niceforo Zambrano"
+    },
+    "createdAt": "2021-05-07T13:01:43",
+    "updatedAt": "2021-05-07T13:01:43"
+  },
+  {
+    "nombre": "Hasty Hargey",
+    "email": "hhargeyp@google.it",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Álvaro Obregón",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.25500197053545,
+          19.331436677931986
+        ]
+      }
+    },
+    "createdAt": "2023-04-19T04:43:10",
+    "updatedAt": "2023-04-19T04:43:10"
+  },
+  {
+    "nombre": "Wolfgang De Vere",
+    "email": "wdeq@uiuc.edu",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.12400501459055,
+          19.510355310815868
+        ]
+      },
+      "calle": "Avenida Acueducto de Guadalupe"
+    },
+    "createdAt": "2023-08-25T21:06:44",
+    "updatedAt": "2023-08-25T21:06:44"
+  },
+  {
+    "nombre": "Lucille Dewdeny",
+    "email": "ldewdenyr@pinterest.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Cuajimalpa de Morelos",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.31397874193541,
+          19.320161521325414
+        ]
+      },
+      "calle": "Formula Uno"
+    },
+    "createdAt": "2024-05-31T20:32:09",
+    "updatedAt": "2024-05-31T20:32:09"
+  },
+  {
+    "nombre": "Ly O'Dare",
+    "email": "lodares@amazon.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.10874303022146,
+          19.494923880307134
+        ]
+      },
+      "calle": "Privada Veracruz"
+    },
+    "createdAt": "2024-05-22T11:44:55",
+    "updatedAt": "2024-05-22T11:44:55"
+  },
+  {
+    "nombre": "Stan Blant",
+    "email": "sblantt@histats.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.03494117597667,
+          19.329932288687445
+        ]
+      },
+      "calle": "Calle Pozos"
+    },
+    "createdAt": "2022-09-09T12:11:26",
+    "updatedAt": "2022-09-09T12:11:26"
+  },
+  {
+    "nombre": "Jerry Ewells",
+    "email": "jewellsu@theguardian.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.10370978815337,
+          19.486615458662936
+        ]
+      },
+      "calle": "Calle Melchor Múzquiz"
+    },
+    "createdAt": "2023-05-10T15:19:14",
+    "updatedAt": "2023-05-10T15:19:14"
+  },
+  {
+    "nombre": "Tannie Snape",
+    "email": "tsnapev@tinypic.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.11642998670807,
+          19.495806989198435
+        ]
+      },
+      "calle": "Calle Cuitlahuac"
+    },
+    "createdAt": "2023-02-23T05:08:05",
+    "updatedAt": "2023-02-23T05:08:05"
+  },
+  {
+    "nombre": "Jane Bramwich",
+    "email": "jbramwichw@mapquest.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Cuauhtémoc",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.15206967087884,
+          19.419372453486915
+        ]
+      },
+      "calle": "Calle Doctor Ildelfonso Velasco"
+    },
+    "createdAt": "2024-10-30T20:53:41",
+    "updatedAt": "2024-10-30T20:53:41"
+  },
+  {
+    "nombre": "Tiffani Gradly",
+    "email": "tgradlyx@acquirethisname.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Venustiano Carranza",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.09354277111908,
+          19.437569445163078
+        ]
+      },
+      "calle": "Calle Norte 37"
+    },
+    "createdAt": "2020-06-10T02:10:16",
+    "updatedAt": "2020-06-10T02:10:16"
+  },
+  {
+    "nombre": "Carlin Goodale",
+    "email": "cgoodaley@nifty.com",
+    "role": "owner",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.04544879244654,
+          19.3431365400915
+        ]
+      },
+      "calle": "Calle 61"
+    },
+    "createdAt": "2022-04-15T20:43:50",
+    "updatedAt": "2022-04-15T20:43:50"
+  },
+  {
+    "nombre": "Randa Frier",
+    "email": "rfrierz@blogs.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Xochimilco",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.07462309050338,
+          19.24690403796103
+        ]
+      },
+      "calle": "Avenida Tenochtitlán"
+    },
+    "createdAt": "2025-02-21T02:28:21",
+    "updatedAt": "2025-02-21T02:28:21"
+  },
+  {
+    "nombre": "Linette Pook",
+    "email": "lpook10@e-recht24.de",
+    "role": "owner",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Álvaro Obregón",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.23433809275718,
+          19.346605016214447
+        ]
+      },
+      "calle": "Calle de los Cormoranes"
+    },
+    "createdAt": "2020-06-27T19:02:07",
+    "updatedAt": "2020-06-27T19:02:07"
+  },
+  {
+    "nombre": "Mariya Nyles",
+    "email": "mnyles11@walmart.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.10716147737183,
+          19.506444447486356
+        ]
+      },
+      "calle": "Calle Teodoro L Santa Cruz"
+    },
+    "createdAt": "2024-09-18T21:14:42",
+    "updatedAt": "2024-09-18T21:14:42"
+  },
+  {
+    "nombre": "Wilt Joinson",
+    "email": "wjoinson12@state.gov",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Tlalpan",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.201612382575,
+          19.202535174212322
+        ]
+      },
+      "calle": "Calle Pedro Moreno"
+    },
+    "createdAt": "2020-02-26T07:27:43",
+    "updatedAt": "2020-02-26T07:27:43"
+  },
+  {
+    "nombre": "Lyn Alner",
+    "email": "lalner13@deviantart.com",
+    "role": "owner",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Tlalpan",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.21733794582913,
+          19.195664817332155
+        ]
+      }
+    },
+    "createdAt": "2021-10-15T21:28:46",
+    "updatedAt": "2021-10-15T21:28:46"
+  },
+  {
+    "nombre": "Lind Pyatt",
+    "email": "lpyatt14@arstechnica.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.07443177007701,
+          19.347860765610406
+        ]
+      },
+      "calle": "Calle Bugambilia"
+    },
+    "createdAt": "2021-01-04T03:34:27",
+    "updatedAt": "2021-01-04T03:34:27"
+  },
+  {
+    "nombre": "Abdel Boddington",
+    "email": "aboddington15@reference.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Tlalpan",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.20531258564003,
+          19.217476735846546
+        ]
+      },
+      "calle": "Calle Ignacio Zaragoza"
+    },
+    "createdAt": "2022-06-09T14:31:10",
+    "updatedAt": "2022-06-09T14:31:10"
+  },
+  {
+    "nombre": "Linnet Auston",
+    "email": "lauston16@exblog.jp",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Álvaro Obregón",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.23982052722197,
+          19.336881044731353
+        ]
+      },
+      "calle": "Cerrada Segunda San José"
+    },
+    "createdAt": "2021-08-28T13:49:59",
+    "updatedAt": "2021-08-28T13:49:59"
+  },
+  {
+    "nombre": "Marina Loughton",
+    "email": "mloughton17@weebly.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.05995101706431,
+          19.35163105952229
+        ]
+      },
+      "calle": "Anillo Periférico"
+    },
+    "createdAt": "2022-12-29T08:40:46",
+    "updatedAt": "2022-12-29T08:40:46"
+  },
+  {
+    "nombre": "Nealson Dies",
+    "email": "ndies18@uol.com.br",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Cuajimalpa de Morelos",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.30166508152676,
+          19.33891857263179
+        ]
+      },
+      "calle": "Ranita"
+    },
+    "createdAt": "2024-09-19T17:37:43",
+    "updatedAt": "2024-09-19T17:37:43"
+  },
+  {
+    "nombre": "Nicholle Giacomo",
+    "email": "ngiacomo19@gov.uk",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Tlalpan",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.20121342644674,
+          19.201780163773545
+        ]
+      },
+      "calle": "Calle Pedro Moreno"
+    },
+    "createdAt": "2023-03-02T09:04:00",
+    "updatedAt": "2023-03-02T09:04:00"
+  },
+  {
+    "nombre": "Melanie Ahrendsen",
+    "email": "mahrendsen1a@moonfruit.com",
+    "role": "owner",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.07289236391297,
+          19.33621468559256
+        ]
+      },
+      "calle": "Calle Estrella"
+    },
+    "createdAt": "2024-10-26T21:15:19",
+    "updatedAt": "2024-10-26T21:15:19"
+  },
+  {
+    "nombre": "Truman Threadgill",
+    "email": "tthreadgill1b@etsy.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.06709118357969,
+          19.34166692896861
+        ]
+      },
+      "calle": "Calle Petunia"
+    },
+    "createdAt": "2025-03-24T02:22:56",
+    "updatedAt": "2025-03-24T02:22:56"
+  },
+  {
+    "nombre": "Amata Menci",
+    "email": "amenci1c@baidu.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Miguel Hidalgo",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.21239744390033,
+          19.415693915988403
+        ]
+      },
+      "calle": "Calle Francisco de Croix"
+    },
+    "createdAt": "2024-04-21T10:23:35",
+    "updatedAt": "2024-04-21T10:23:35"
+  },
+  {
+    "nombre": "Carleton Pocknell",
+    "email": "cpocknell1d@sourceforge.net",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "La Magdalena Contreras",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.26405471030284,
+          19.265963027505656
+        ]
+      },
+      "calle": "Panorámica"
+    },
+    "createdAt": "2022-09-03T17:25:52",
+    "updatedAt": "2022-09-03T17:25:52"
+  },
+  {
+    "nombre": "Kacey Slogrove",
+    "email": "kslogrove1e@baidu.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.06372016478159,
+          19.342512027798232
+        ]
+      },
+      "calle": "Calle Betabel"
+    },
+    "createdAt": "2022-09-24T02:51:22",
+    "updatedAt": "2022-09-24T02:51:22"
+  },
+  {
+    "nombre": "Randie Thurstance",
+    "email": "rthurstance1f@dell.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.06894041023658,
+          19.340065868577366
+        ]
+      },
+      "calle": "Avenida Insurgente Eugenio Girón"
+    },
+    "createdAt": "2024-11-13T08:05:46",
+    "updatedAt": "2024-11-13T08:05:46"
+  },
+  {
+    "nombre": "Kirby Loveard",
+    "email": "kloveard1g@wufoo.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Tlalpan",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.20846473142608,
+          19.210367426034367
+        ]
+      }
+    },
+    "createdAt": "2022-05-26T02:18:56",
+    "updatedAt": "2022-05-26T02:18:56"
+  },
+  {
+    "nombre": "Cammy Fouldes",
+    "email": "cfouldes1h@geocities.jp",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.06781424947289,
+          19.344405417487522
+        ]
+      },
+      "calle": "Calle Nube"
+    },
+    "createdAt": "2023-05-09T19:02:38",
+    "updatedAt": "2023-05-09T19:02:38"
+  },
+  {
+    "nombre": "Lenka Smaling",
+    "email": "lsmaling1i@nsw.gov.au",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Miguel Hidalgo",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.19427176629142,
+          19.43453478652389
+        ]
+      },
+      "calle": "Avenida Eugenio Sue"
+    },
+    "createdAt": "2020-09-14T16:49:02",
+    "updatedAt": "2020-09-14T16:49:02"
+  },
+  {
+    "nombre": "Claudian Loncaster",
+    "email": "cloncaster1j@cbsnews.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Benito Juárez",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.15358721991677,
+          19.374196957756233
+        ]
+      },
+      "calle": "Calle Monte Albán"
+    },
+    "createdAt": "2021-09-10T07:00:12",
+    "updatedAt": "2021-09-10T07:00:12"
+  },
+  {
+    "nombre": "Marin Klimp",
+    "email": "mklimp1k@gizmodo.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Cuauhtémoc",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.14896788377656,
+          19.42521522246962
+        ]
+      },
+      "calle": "Avenida Doctor Río de la Loza"
+    },
+    "createdAt": "2021-11-25T14:41:59",
+    "updatedAt": "2021-11-25T14:41:59"
+  },
+  {
+    "nombre": "Dorothee Manston",
+    "email": "dmanston1l@mayoclinic.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.0752540983383,
+          19.34422373911955
+        ]
+      },
+      "calle": "Calle José María Joaristi"
+    },
+    "createdAt": "2022-09-29T22:51:47",
+    "updatedAt": "2022-09-29T22:51:47"
+  },
+  {
+    "nombre": "Tynan Bonniface",
+    "email": "tbonniface1m@symantec.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Azcapotzalco",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.16485201362372,
+          19.4876835295211
+        ]
+      },
+      "calle": "Calle Poniente 122"
+    },
+    "createdAt": "2024-05-15T18:08:52",
+    "updatedAt": "2024-05-15T18:08:52"
+  },
+  {
+    "nombre": "Patrizia McReedy",
+    "email": "pmcreedy1n@cargocollective.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.10740221931557,
+          19.49364960991256
+        ]
+      },
+      "calle": "Andador 6"
+    },
+    "createdAt": "2022-10-28T03:42:12",
+    "updatedAt": "2022-10-28T03:42:12"
+  },
+  {
+    "nombre": "Gabie Penkethman",
+    "email": "gpenkethman1o@chicagotribune.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Cuauhtémoc",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.15422240740625,
+          19.434009945240017
+        ]
+      },
+      "calle": "Calle Maestro Antonio Caso"
+    },
+    "createdAt": "2025-03-25T05:45:27",
+    "updatedAt": "2025-03-25T05:45:27"
+  },
+  {
+    "nombre": "Venita Gwyer",
+    "email": "vgwyer1p@clickbank.net",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Milpa Alta",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.04213775473286,
+          19.136797657583234
+        ]
+      }
+    },
+    "createdAt": "2020-02-02T03:37:51",
+    "updatedAt": "2020-02-02T03:37:51"
+  },
+  {
+    "nombre": "Darb Taveriner",
+    "email": "dtaveriner1q@examiner.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Xochimilco",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.09420324726331,
+          19.253047947617716
+        ]
+      },
+      "calle": "Calle Hermenegildo Galeana"
+    },
+    "createdAt": "2024-01-22T21:46:18",
+    "updatedAt": "2024-01-22T21:46:18"
+  },
+  {
+    "nombre": "Madelaine Caslett",
+    "email": "mcaslett1r@technorati.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.11521073350671,
+          19.492135709924927
+        ]
+      }
+    },
+    "createdAt": "2022-02-05T23:24:55",
+    "updatedAt": "2022-02-05T23:24:55"
+  },
+  {
+    "nombre": "Cloris Burgyn",
+    "email": "cburgyn1s@wix.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Coyoacán",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.14397136048527,
+          19.32393849483469
+        ]
+      }
+    },
+    "createdAt": "2020-07-18T17:01:02",
+    "updatedAt": "2020-07-18T17:01:02"
+  },
+  {
+    "nombre": "Michele Mabbe",
+    "email": "mmabbe1t@guardian.co.uk",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.11049433259251,
+          19.501333509713017
+        ]
+      },
+      "calle": "Calle Huetzin"
+    },
+    "createdAt": "2022-08-11T11:06:31",
+    "updatedAt": "2022-08-11T11:06:31"
+  },
+  {
+    "nombre": "Joeann Heliar",
+    "email": "jheliar1u@youtube.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Tláhuac",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.00704009289902,
+          19.27072440566356
+        ]
+      },
+      "calle": "Calle Galeana"
+    },
+    "createdAt": "2020-06-08T03:27:51",
+    "updatedAt": "2020-06-08T03:27:51"
+  },
+  {
+    "nombre": "Tabbatha Davy",
+    "email": "tdavy1v@tinyurl.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Miguel Hidalgo",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.207024286259,
+          19.44936211158339
+        ]
+      },
+      "calle": "Avenida Río San Joaquín"
+    },
+    "createdAt": "2024-11-17T04:27:48",
+    "updatedAt": "2024-11-17T04:27:48"
+  },
+  {
+    "nombre": "Vivianne Spurdens",
+    "email": "vspurdens1w@dedecms.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Venustiano Carranza",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.08062937837434,
+          19.443955888993383
+        ]
+      },
+      "calle": "Calle Norte 194"
+    },
+    "createdAt": "2022-07-26T14:03:56",
+    "updatedAt": "2022-07-26T14:03:56"
+  },
+  {
+    "nombre": "Bentley Nesbeth",
+    "email": "bnesbeth1x@skyrock.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Xochimilco",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.08903790350271,
+          19.2445139477524
+        ]
+      },
+      "calle": "Cerrada Gardenias"
+    },
+    "createdAt": "2020-05-21T19:59:17",
+    "updatedAt": "2020-05-21T19:59:17"
+  },
+  {
+    "nombre": "Menard Bache",
+    "email": "mbache1y@nsw.gov.au",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Azcapotzalco",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.1892100967838,
+          19.478654803485146
+        ]
+      },
+      "calle": "Calzada Santa Apolonia"
+    },
+    "createdAt": "2024-12-08T20:55:20",
+    "updatedAt": "2024-12-08T20:55:20"
+  },
+  {
+    "nombre": "Annnora Grantham",
+    "email": "agrantham1z@indiatimes.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.04359558714225,
+          19.339812464940028
+        ]
+      }
+    },
+    "createdAt": "2020-12-21T08:10:30",
+    "updatedAt": "2020-12-21T08:10:30"
+  },
+  {
+    "nombre": "Debi Nisbith",
+    "email": "dnisbith20@ow.ly",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztacalco",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.11299713910276,
+          19.399341072896142
+        ]
+      },
+      "calle": "Avenida Azucar"
+    },
+    "createdAt": "2023-04-12T16:55:28",
+    "updatedAt": "2023-04-12T16:55:28"
+  },
+  {
+    "nombre": "Farica Faccini",
+    "email": "ffaccini21@google.com.au",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Cuauhtémoc",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.14690277850345,
+          19.425813985794157
+        ]
+      },
+      "calle": "Avenida Doctor Río de la Loza"
+    },
+    "createdAt": "2023-01-13T20:04:10",
+    "updatedAt": "2023-01-13T20:04:10"
+  },
+  {
+    "nombre": "Alvis Purdy",
+    "email": "apurdy22@kickstarter.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Álvaro Obregón",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.25086761037454,
+          19.33376409540776
+        ]
+      },
+      "calle": "Calle Jacarandas"
+    },
+    "createdAt": "2023-04-28T22:30:48",
+    "updatedAt": "2023-04-28T22:30:48"
+  },
+  {
+    "nombre": "Karalynn Vaudin",
+    "email": "kvaudin23@networkadvertising.org",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Venustiano Carranza",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.08998290646551,
+          19.44451219992273
+        ]
+      },
+      "calle": "Calle Manchuria"
+    },
+    "createdAt": "2023-09-18T09:09:55",
+    "updatedAt": "2023-09-18T09:09:55"
+  },
+  {
+    "nombre": "Sergeant Labden",
+    "email": "slabden24@cdc.gov",
+    "role": "owner",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Venustiano Carranza",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.09411318412833,
+          19.420339958488107
+        ]
+      },
+      "calle": "Calle Aviación Civil"
+    },
+    "createdAt": "2020-01-04T16:27:34",
+    "updatedAt": "2020-01-04T16:27:34"
+  },
+  {
+    "nombre": "Siusan Worham",
+    "email": "sworham25@bloomberg.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.06178694648563,
+          19.344742864430973
+        ]
+      },
+      "calle": "Calzada Ermita Iztapalapa"
+    },
+    "createdAt": "2024-06-16T05:14:29",
+    "updatedAt": "2024-06-16T05:14:29"
+  },
+  {
+    "nombre": "Wheeler Conquest",
+    "email": "wconquest26@reverbnation.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztacalco",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.10042236970659,
+          19.40152568719897
+        ]
+      },
+      "calle": "Calle Azafrán"
+    },
+    "createdAt": "2020-12-11T08:34:22",
+    "updatedAt": "2020-12-11T08:34:22"
+  },
+  {
+    "nombre": "Tyrus Hillen",
+    "email": "thillen27@wunderground.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Benito Juárez",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.15053505413753,
+          19.38262205168442
+        ]
+      },
+      "calle": "Calle Mitla"
+    },
+    "createdAt": "2020-01-05T19:55:55",
+    "updatedAt": "2020-01-05T19:55:55"
+  },
+  {
+    "nombre": "Bastien Casely",
+    "email": "bcasely28@360.cn",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Xochimilco",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.08560142065384,
+          19.238622613697313
+        ]
+      }
+    },
+    "createdAt": "2020-11-28T17:11:59",
+    "updatedAt": "2020-11-28T17:11:59"
+  },
+  {
+    "nombre": "Dallas Rove",
+    "email": "drove29@bizjournals.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Tlalpan",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.20748036348509,
+          19.20398944029985
+        ]
+      },
+      "calle": "Calle Pedro Moreno"
+    },
+    "createdAt": "2022-02-05T00:59:58",
+    "updatedAt": "2022-02-05T00:59:58"
+  },
+  {
+    "nombre": "Anna-diane Malloch",
+    "email": "amalloch2a@yandex.ru",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.07206806141646,
+          19.340789815335363
+        ]
+      },
+      "calle": "Avenida Insurgente Eugenio Girón"
+    },
+    "createdAt": "2021-01-30T06:23:19",
+    "updatedAt": "2021-01-30T06:23:19"
+  },
+  {
+    "nombre": "Shelli Buckerfield",
+    "email": "sbuckerfield2b@artisteer.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.11912913186212,
+          19.51138454096935
+        ]
+      },
+      "calle": "Prolongación Narciso Mendoza"
+    },
+    "createdAt": "2021-03-05T05:25:07",
+    "updatedAt": "2021-03-05T05:25:07"
+  },
+  {
+    "nombre": "Lenore Dore",
+    "email": "ldore2c@mapy.cz",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.04153557440515,
+          19.34083584834776
+        ]
+      },
+      "calle": "Calle Cuauhtémoc"
+    },
+    "createdAt": "2021-04-29T01:22:58",
+    "updatedAt": "2021-04-29T01:22:58"
+  },
+  {
+    "nombre": "Kaela Collet",
+    "email": "kcollet2d@ovh.net",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Venustiano Carranza",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.08161666352376,
+          19.4380827664028
+        ]
+      },
+      "calle": "Avenida Quetzalcóatl"
+    },
+    "createdAt": "2022-07-05T07:35:57",
+    "updatedAt": "2022-07-05T07:35:57"
+  },
+  {
+    "nombre": "Saraann Chell",
+    "email": "schell2e@freewebs.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Coyoacán",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.15565237199318,
+          19.341223464383035
+        ]
+      },
+      "calle": "Callejón Ixpatenco"
+    },
+    "createdAt": "2024-10-27T07:48:38",
+    "updatedAt": "2024-10-27T07:48:38"
+  },
+  {
+    "nombre": "Gracie Unsworth",
+    "email": "gunsworth2f@yandex.ru",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Coyoacán",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.15793429351089,
+          19.333571716885444
+        ]
+      },
+      "calle": "Privada Huitzitzilin"
+    },
+    "createdAt": "2024-02-28T02:27:07",
+    "updatedAt": "2024-02-28T02:27:07"
+  },
+  {
+    "nombre": "Peggy Casoni",
+    "email": "pcasoni2g@umn.edu",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Tlalpan",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.19487640927392,
+          19.19446767043264
+        ]
+      }
+    },
+    "createdAt": "2024-05-28T04:56:08",
+    "updatedAt": "2024-05-28T04:56:08"
+  },
+  {
+    "nombre": "Kerry Ollivier",
+    "email": "kollivier2h@lycos.com",
+    "role": "owner",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Álvaro Obregón",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.23702986224424,
+          19.348836250331175
+        ]
+      }
+    },
+    "createdAt": "2020-12-01T01:13:41",
+    "updatedAt": "2020-12-01T01:13:41"
+  },
+  {
+    "nombre": "Hewet Fauguel",
+    "email": "hfauguel2i@sbwire.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.05606807900135,
+          19.342352160923667
+        ]
+      },
+      "calle": "Calzada Ermita Iztapalapa"
+    },
+    "createdAt": "2023-05-31T13:43:07",
+    "updatedAt": "2023-05-31T13:43:07"
+  },
+  {
+    "nombre": "Kissie Mazin",
+    "email": "kmazin2j@google.com.hk",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Tlalpan",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.19946520108951,
+          19.21673259551107
+        ]
+      },
+      "calle": "Calle Francisco Peñuñuri"
+    },
+    "createdAt": "2022-07-19T23:03:15",
+    "updatedAt": "2022-07-19T23:03:15"
+  },
+  {
+    "nombre": "Ferrel Stapels",
+    "email": "fstapels2k@fda.gov",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Milpa Alta",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.05876051153065,
+          19.126984260855718
+        ]
+      }
+    },
+    "createdAt": "2023-02-26T01:24:02",
+    "updatedAt": "2023-02-26T01:24:02"
+  },
+  {
+    "nombre": "Roderick Yegorchenkov",
+    "email": "ryegorchenkov2l@bandcamp.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Álvaro Obregón",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.2423294980978,
+          19.331700559739343
+        ]
+      },
+      "calle": "Río Suchiapa"
+    },
+    "createdAt": "2020-01-20T19:23:27",
+    "updatedAt": "2020-01-20T19:23:27"
+  },
+  {
+    "nombre": "Giacobo Thornhill",
+    "email": "gthornhill2m@google.it",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.05546831253645,
+          19.358616860909446
+        ]
+      },
+      "calle": "Avenida Antonio Díaz Soto y Gama"
+    },
+    "createdAt": "2024-05-16T20:07:38",
+    "updatedAt": "2024-05-16T20:07:38"
+  },
+  {
+    "nombre": "Carrol Sarchwell",
+    "email": "csarchwell2n@timesonline.co.uk",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Coyoacán",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.14918027754946,
+          19.331543966596026
+        ]
+      },
+      "calle": "Privada Tercera Cerrito"
+    },
+    "createdAt": "2021-01-18T13:39:11",
+    "updatedAt": "2021-01-18T13:39:11"
+  },
+  {
+    "nombre": "Ferne Joiris",
+    "email": "fjoiris2o@intel.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Cuauhtémoc",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.14671399731316,
+          19.416714358624198
+        ]
+      },
+      "calle": "Calle Doctor José Terrés"
+    },
+    "createdAt": "2024-09-30T00:48:05",
+    "updatedAt": "2024-09-30T00:48:05"
+  },
+  {
+    "nombre": "Karla Redmille",
+    "email": "kredmille2p@nydailynews.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Benito Juárez",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.18523527106764,
+          19.37543539784234
+        ]
+      },
+      "calle": "Extremadura"
+    },
+    "createdAt": "2022-06-17T13:03:50",
+    "updatedAt": "2022-06-17T13:03:50"
+  },
+  {
+    "nombre": "Sebastiano Yarrall",
+    "email": "syarrall2q@si.edu",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Iztapalapa",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.07795517798186,
+          19.348936768817317
+        ]
+      },
+      "calle": "Camino Real a San Lorenzo"
+    },
+    "createdAt": "2021-11-26T03:21:49",
+    "updatedAt": "2021-11-26T03:21:49"
+  },
+  {
+    "nombre": "Nancy Winsborrow",
+    "email": "nwinsborrow2r@twitpic.com",
+    "role": "user",
+    "direccion": {
+      "estado": "Ciudad de México",
+      "municipio": "Gustavo A. Madero",
+      "ubicacion": {
+        "type": "Point",
+        "coordinates": [
+          -99.10548880431834,
+          19.499421227233963
+        ]
+      },
+      "calle": "Calle 4"
+    },
+    "createdAt": "2020-06-02T21:01:26",
+    "updatedAt": "2020-06-02T21:01:26"
+  }
+]
