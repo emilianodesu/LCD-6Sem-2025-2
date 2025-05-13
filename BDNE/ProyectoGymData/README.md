@@ -2,9 +2,26 @@
 
 Este repositorio contiene scripts para extraer, transformar y cargar (ETL) datos de distintas fuentes—INEGI (gimnasios), Mockaroo (usuarios) y MongoDB (reseñas)—y luego combinarlos e insertar en una base de datos MongoDB única.
 
+## Entorno Virtual
+```bash
+# Crear y activar el entorno virtual
+python -m venv .venv
+
+# Windows PowerShell
+.\.venv\Scripts\Activate.ps1
+
+# Linux/MacOS
+source .venv/bin/activate
+
+# Actualizar pip e instalar dependencias
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
 ## Índice
 
 - [bdne - ETL and Data Integration](#bdne---etl-and-data-integration)
+  - [Entorno Virtual](#entorno-virtual)
   - [Índice](#índice)
   - [Estructura del proyecto](#estructura-del-proyecto)
   - [Requisitos](#requisitos)
