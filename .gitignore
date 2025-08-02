@@ -26,3 +26,7 @@ KTH_TIPS
 *.tsv.gz
 .env
 parquet
+NYPD_Complaint_Data_Historic_Complete.csv
+cleaned_data
+original_data
+sub-data.csv
